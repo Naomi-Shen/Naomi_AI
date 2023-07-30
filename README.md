@@ -11,6 +11,6 @@ Currently, I'm dipping my toes into the big pool of large-scale tax models 📊,
 
 But that's not all! I'm also weaving some magic 🧙‍♀️ in the world of AIGC, combining the charisma of movies 🎥 and the thrill of game engines 🕹️.
 
-Excited for an intellectual exchange? 🤓 I'm all ears! Let's collide our worlds 🌏 and spark some new ideas! 💥
+Excited for an intellectual exchange? 🤓 I'm all ears! Let's collide our worlds and spark some new ideas! 💥
 
 Looking forward to connecting with you all! 💖 ~
