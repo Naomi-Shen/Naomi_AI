@@ -5,7 +5,7 @@
 
 - 👋 Hi lovelies!
 
-I'm your gal, Naomi.Shen, right from the heart of the super cool 🎓 Waseda-x Tencent Research Institute. 😎
+This is Naomi.Shen, right from 🎓 Waseda-x Tencent Research Institute. 😎
 
 Currently, I'm dipping my toes into the big pool of large-scale tax models 📊, and let me tell you, it's fascinating! 💡
 
