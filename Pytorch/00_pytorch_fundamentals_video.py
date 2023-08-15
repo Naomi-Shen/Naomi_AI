@@ -94,7 +94,7 @@ Random tensors are important  because the way many neural networks learn is that
 Torch.random tensors - https://pytorch.org/docs/stable/generated/torch.rand.html
 """
 
-#create a random tensor of size(3,4)
+#Create a random tensor of size(3,4)
 random_tensor = torch.rand(3,4)
 random_tensor
 
