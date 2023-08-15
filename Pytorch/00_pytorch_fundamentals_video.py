@@ -100,7 +100,7 @@ random_tensor
 
 random_tensor.ndim
 
-#create a random tensor with similar shape to an image tensor
+#Create a random tensor with similar shape to an image tensor
 random_image_size_tensor = torch.rand(size=(3,224,224)) # height,width, color channels (R, G, B)
 random_image_size_tensor.shape,random_image_size_tensor.ndim
 # torch.rand(3,4)=torch.rand(size=(3,4))
