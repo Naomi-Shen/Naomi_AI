@@ -107,13 +107,13 @@ random_image_size_tensor.shape,random_image_size_tensor.ndim
 
 """### Zeros and ones"""
 
-#create a tensor of all zeros
+#Create a tensor of all zeros
 zeros = torch.zeros(3,4)
 zeros
 
 zeros*random_tensor
 
-#create a tensor of all ones
+#Create a tensor of all ones
 ones = torch.ones(3,4)
 ones
 
