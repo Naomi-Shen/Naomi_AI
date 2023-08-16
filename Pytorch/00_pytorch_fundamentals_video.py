@@ -160,7 +160,7 @@ float_16_tensor*float_32_tensor#此处没有出现error，但其他dtype不match
 int_32_tensor = torch.tensor([3,6,9],dtype=torch.int32)# no dots to make it float
 int_32_tensor
 
-float_32_tensor * int_32_tensor
+float_32_tensor * int_32_tensor # error
 
 """### Getting information from tensors (tensor attributes)
 
