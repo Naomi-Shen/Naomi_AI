@@ -222,7 +222,16 @@ Two main ways of performing multiplication in neural networkd and deep learning
 
 More information on multiplying matrixes-
 https://www.mathsisfun.com/algebra/matrix-multiplying.html
+
+There are 2 main rules that performing matrix multiplication needs to satisfy:
+1. The **inner dimensions** must match:
+* only'(3,2)@(2,3)'will work but not (3,2)@(3,2)
+2. The resulting matrix has the shape of the **outing dimensions**:
+* '(2,3)*(3,2)'->'(2,2)'
+* '(3,2)*(2,3)'->'(3,2)'
 """
+
+torch.rand(3,2).shape
 
 # Element wise multiplication
 print(tensor,"*",tensor)
@@ -230,6 +239,9 @@ print(f"Equals:{tensor*tensor}")
 
 # Matrix multiplication
 torch.matmul(tensor,tensor)
+
+
+tensor @tensor
 
 tensor
 
@@ -246,3 +258,10 @@ tensor
 # Commented out IPython magic to ensure Python compatibility.
 # %%time
 # torch.matmul(tensor,tensor)
+
+
+"""### One of the most common errors in deep learning:shape errors
+
+check:http://matrixmultiplication.xyz/
+
+"""
