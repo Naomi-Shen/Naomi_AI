@@ -326,7 +326,7 @@ x.argmin()
 
 x[0]
 
-#  the position of maximum value
+#  Find the position of maximum value
 x.argmax()
 
 x[9]
