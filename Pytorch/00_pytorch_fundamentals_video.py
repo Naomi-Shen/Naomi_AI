@@ -265,3 +265,68 @@ tensor
 check:http://matrixmultiplication.xyz/
 
 """
+
+# Shapes for matrix multiplication
+tensor_A = torch.tensor([[1,2],
+              [3,4],
+              [5,6]])
+tensor_B = torch.tensor([[7,10],
+              [8,11],
+              [9,12]])
+
+# torch.matmul = torch.mm
+torch.mm(tensor_A,tensor_B)
+
+tensor_A.shape,tensor_B.shape
+
+"""To fix the tensor shape issues, we can manipulate the shape of one of our tensors using **teanspose**
+
+A **transpose** switches the axes or dimensions of a given tensor
+"""
+
+tensor_B.T,tensor_B.T.shape
+
+tensor_B,tensor_B.shape
+
+torch.mm(tensor_A,tensor_B.T)
+
+torch.mm(tensor_A,tensor_B.T).shape
+
+# The matrix multiplication operation works when tensor_B is transposed
+print(f"Original shapes: tensor_A ={tensor_A.shape}, tensor_B ={tensor_B.shape}")
+print(f"New shapes: tensor_A ={tensor_A.shape}(same shape as above),tensor_B.T ={tensor_B.T.shape}")
+print(f"Multiplying:{tensor_A.shape}@{tensor_B.shape}<- inner dimensions must match")
+print("Output:\n")
+output = torch.matmul(tensor_A,tensor_B.T)
+print(output)
+print(f"\nOutput shape:{output.shape}")
+
+"""## Finding the min, max,mean, sum, etc (tensor aggregation)"""
+
+# Create a tensor
+x = torch.arange(1,100,10)
+x,x.dtype
+
+# Find the min
+torch.min(x),x.min()
+
+# Find the max
+torch.max(x),x.max()
+
+# Find the mean - note: the torch.mean() function requires a tensor of float32 datatype to work
+torch.mean(x.type(torch.float32)),x.type(torch.float).mean()
+
+# Find the sum
+torch.sum(x),x.sum()
+
+"""## Finding the positional min and max"""
+
+# Find the position in tensor that has the minimum value with argmin() -> returns index position of target tensor where the minimum value occurs
+x.argmin()
+
+x[0]
+
+#  the position of maximum value
+x.argmax()
+
+x[9]
