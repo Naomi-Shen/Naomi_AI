@@ -330,3 +330,42 @@ x[0]
 x.argmax()
 
 x[9]
+
+x
+
+"""## Reshaping, stacking, squeezing and unsqueezing tensors
+
+* Reshaping - reshapes an input tensor to a defined shape
+* View - Return a view of an input of certain shape but keep the same memory as the original tensor
+* Stacking - combine multiple tensors on top of each other(vstack) or side by side (hstack)
+* Squeeze - removes all "1" dimensions from a tensor
+* Unsqueeze - add a "1" dimension to a target tensor
+* Permute - Return a view of the input with dimensions permuted(swapped) in a certain way
+"""
+
+# Create a tensor
+import torch
+x = torch.arange(1.,10.)
+x,x.shape
+
+# Add an extra dimension
+x_reshaped = x.reshape(9,1)
+x_reshaped,x_reshaped.shape
+
+# Change the view
+z = x.view(1,9)
+z,z.shape
+
+# Changing z changes x(because a view of a tensor shares the same memory as the original input)
+z[:,0] = 5
+z,x
+
+# Stack tensors on top of each other
+x_stacked = torch.stack([x,x,x,x], dim=0)
+x_stacked
+
+# Stack tensors on top of each other
+x_stacked = torch.stack([x,x,x,x], dim=1)
+x_stacked
+
+# Note:vstack using dimension=0,hstack using dimension=1
