@@ -336,11 +336,11 @@ x
 """## Reshaping, stacking, squeezing and unsqueezing tensors
 
 * Reshaping - reshapes an input tensor to a defined shape
-* View - Return a view of an input of certain shape but keep the same memory as the original tensor
+* View - return a view of an input of certain shape but keep the same memory as the original tensor
 * Stacking - combine multiple tensors on top of each other(vstack) or side by side (hstack)
 * Squeeze - remove all "1" dimensions from a tensor
 * Unsqueeze - add a "1" dimension to a target tensor
-* Permute - Return a view of the input with dimensions permuted(swapped) in a certain way
+* Permute - return a view of the input with dimensions permuted(swapped) in a certain way
 """
 
 # Create a tensor
