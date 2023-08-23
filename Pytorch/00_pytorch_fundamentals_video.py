@@ -369,3 +369,12 @@ x_stacked = torch.stack([x,x,x,x], dim=1)
 x_stacked
 
 # Note:vstack using dimension=0,hstack using dimension=1
+
+# torch.squeeze() - removes all single dimensions from a target tensor
+print(f"Previous tensor:{z}")
+print(f"Previous shape:{x_reshaped.shape}")
+
+# Remove extra dimensions from x_reshaped
+z_squeezed = z.squeeze()
+print(f"\nNew tensor:{z_squeezed}")
+print(f"New shape:{z_squeezed.shape}")
