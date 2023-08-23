@@ -378,3 +378,12 @@ print(f"Previous shape:{x_reshaped.shape}")
 z_squeezed = z.squeeze()
 print(f"\nNew tensor:{z_squeezed}")
 print(f"New shape:{z_squeezed.shape}")
+
+# torch.unsqueeze() - adds a single dimension to a target tensor at a specific dim (dimension)
+print(f"Previous target:{z_squeezed}")
+print(f"Previous shape:{z_squeezed.shape}")
+
+# Add an extra dimension with unsqueeze
+z_unsqueezed = z_squeezed.unsqueeze(dim=0#could be 1 or any number)
+print(f"\nNew tensor:{z_unsqueezed}")
+print(f"New shape:{z_unsqueezed.shape}")
