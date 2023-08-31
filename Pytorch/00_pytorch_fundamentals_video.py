@@ -19,7 +19,7 @@ If a question https://github.com/mrdbourke/pytorch-deep-learning/discussions
 
 print("Hello Im excited to learn pytorch")
 
-!nvidia-smi
+!nvidia-smi # used on colab.research.google.com to test what device the code is running on
 
 import torch
 import pandas as pd
