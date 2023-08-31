@@ -446,3 +446,58 @@ x[:,2,2] #result:tensor([9])
 x[0,2,2] #result:tensor(9)
 
 x[:,:,2]
+
+"""## PyTorch tensors & NumPy
+
+NumPy is a popular scientific Python numerical computing library.
+
+And because of this, PyTorch has functionality to interact with it.
+
+* Data in NumPy, want in PyTorch tensor -> 'torch.from_numpy(ndarray)'
+* PyTorch tensor -> NumPy ->'torch.Tensor.numpy()'
+"""
+
+# NumPy array to tensor
+import torch
+import numpy as np
+
+array = np.arange(1.0, 8.0)
+tensor = torch.from_numpy(array)
+array, tensor
+#result would be (array([1., 2., 3., 4., 5., 6., 7.]),
+# tensor([1., 2., 3., 4., 5., 6., 7.], dtype=torch.float64)
+
+array.dtype
+
+torch.arange(1.0, 8.0).dtype
+# result:torch.float32
+
+# NumPy array to tensor
+import torch
+import numpy as np
+
+array = np.arange(1.0, 8.0)
+tensor = torch.from_numpy(array).type(torch.float32) #dtype=torch.float32 wouldn't work out
+# warning: when converting from numpy ->pytorch,pytorch reflects numpy's default datatype of float64 unless specified otherwise
+array, tensor
+
+tensor.dtype
+
+# Change the value of array, what will this do to "tensor"?
+array = array+1
+array, tensor
+
+# Tensor to NumPy array
+tensor = torch.ones(7)
+numpy_tensor = tensor.numpy()
+tensor, numpy_tensor
+
+numpy_tensor.dtype
+# default of a pytorch tensor datatype is float 32,so when a tensor converts to numpy array, its dtype is also float32
+# default datatype of a numpy array is float 64, when an array converts to a pytorch tensor, its datatype is also float64
+
+# Change the tensor, what happens to 'numpy_tensor'
+tensor = tensor+1
+  tensor, numpy_tensor
+# result would be (tensor([2., 2., 2., 2., 2., 2., 2.]),
+# array([1., 1., 1., 1., 1., 1., 1.], dtype=float32))
