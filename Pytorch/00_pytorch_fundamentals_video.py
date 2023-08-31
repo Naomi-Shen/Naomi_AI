@@ -21,7 +21,7 @@ print("Hello Im excited to learn pytorch")
 
 !nvidia-smi # used on colab.research.google.com to test what device the code is running on
 
-import torch
+import torch # used on colab.research.google.com
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
