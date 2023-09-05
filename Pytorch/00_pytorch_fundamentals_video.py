@@ -503,21 +503,15 @@ tensor = tensor+1
 # array([1., 1., 1., 1., 1., 1., 1.], dtype=float32))
 
 ## Reproducbility (trying to take random out of random)
-
 In short how a neural network learns:
-
 ‘start with random numbers -> tensor operations-> update random numbers to try and make them better representations of the data -> again->again->again->...’
-
 To reduce the randomness in neural networks and PyTorch comes the concept of a **random seed**
-
 Essentially what the random seed does is "flavour" the randomness.
 
 import torch
-
 # Create 2 random tensors
 random_tensor_A = torch.rand(3,4)
 random_tensor_B = torch.rand(3,4)
-
 print(random_tensor_A)
 print(random_tensor_B)
 print(random_tensor_A == random_tensor_B)
