@@ -515,3 +515,58 @@ random_tensor_B = torch.rand(3,4)
 print(random_tensor_A)
 print(random_tensor_B)
 print(random_tensor_A == random_tensor_B)
+
+1 ==1
+
+# Let's make some random but reproducible tensors
+import torch
+
+# Set the random seed
+RANDOM_SEED = 42
+torch.manual_seed(RANDOM_SEED)
+random_tensor_C = torch.rand(3,4)
+
+torch.manual_seed(RANDOM_SEED)# 注意，不加这一句，会是不同tensor
+random_tensor_D = torch.rand(3,4)
+
+print(random_tensor_C)
+print(random_tensor_D)
+print(random_tensor_C == random_tensor_D)
+
+"""Extra resources for reproducibility
+
+*https://pytorch.org/docs/stable/notes/randomness.html
+
+*https://en.wikipedia.org/wiki/Random_seed
+
+##Running tensors and PyTorch objects on the GPUs (and making faster computations)
+
+GPUs = faster computation on numbers, thanks to CUDA + NVIDIA hardware + PyTorch working behind the scenes to make everthing hunky dory(good).
+
+### 1. Getting a GPU
+1. Easiest - Use Google Colab for a free GPU (options to upgrade as well)
+2. Use your own GPU - takes a little bit og setup and requires the investment of purchasing a GPU, there's lots of options..., see this post for what option to get :https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning:https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/
+3. Use cloud computing - GCP, AWS, Azure, these services aloow you to rent computers on the cloud and access them
+
+For2,3 PyTorch + GPU drivers(CUDA) takes a little bit of setting up, to do this, refer to PyTorch setup documentation: https://pytorch.org/get-started/cloud-partners/
+"""
+
+!nvidia-smi
+
+"""###2. Check for GPU access with PyTorch"""
+
+# Check for GPU access with PyTorch
+import torch
+torch.cuda.is_available()
+
+"""For PyTorch since it's capable of running compute on the GPU or CPU,it's best practice to setup device agnostic code:https://pytorch.org/docs/stable/notes/cuda.html#best-practices
+
+E.g. run on GPU if available, else default to CPU
+"""
+
+# Setup device agnostic code
+device ="cuda" if torch.cuda.is_available()else"cpu"
+device
+
+# Count number of devices
+torch.cuda.device_count()
