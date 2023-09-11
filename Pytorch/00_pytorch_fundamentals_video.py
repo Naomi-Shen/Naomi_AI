@@ -526,7 +526,7 @@ RANDOM_SEED = 42
 torch.manual_seed(RANDOM_SEED)
 random_tensor_C = torch.rand(3,4)
 
-torch.manual_seed(RANDOM_SEED)# 注意，不加这一句，会是不同tensor
+torch.manual_seed(RANDOM_SEED)# 注意，不加这一句，C和D会是不同tensor
 random_tensor_D = torch.rand(3,4)
 
 print(random_tensor_C)
