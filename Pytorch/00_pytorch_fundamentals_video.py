@@ -531,7 +531,7 @@ random_tensor_D = torch.rand(3,4)
 
 print(random_tensor_C)
 print(random_tensor_D)
-print(random_tensor_C == random_tensor_D)
+print(random_tensor_C == random_tensor_D) # 此处会出现true
 
 """Extra resources for reproducibility
 
@@ -564,7 +564,7 @@ torch.cuda.is_available()
 E.g. run on GPU if available, else default to CPU
 """
 
-# Setup device agnostic code
+# Setup device agnostic code 
 device ="cuda" if torch.cuda.is_available()else"cpu"
 device
 
