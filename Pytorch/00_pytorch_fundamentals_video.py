@@ -576,7 +576,7 @@ The reason we want our tensors/models on the GPU is because using a GPU results 
 """
 
 # Create a tensor (default on the CPU)
-tensor = torch.tensor([1,2,3],device ="cpu" )#后半句不加上，则默认在cpu
+tensor = torch.tensor([1,2,3],device ="cpu" )#后半句device ="cpu"不加上，默认在cpu
 
 #Tensor not on GPU
 print(tensor,tensor.device)
