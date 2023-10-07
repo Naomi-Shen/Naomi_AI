@@ -48,3 +48,5 @@ python --version
 准备工作完成后，你就可以开始创建数字人了！使用 GPT 生成文案，将文案输入到 SadTalker 模型中，再选取任意图片，就可以生成会动的数字人了。
 
 **注意：** 本教程主要用于训练真人或者卡通形象面部模型。
+
+进一步借鉴：https://ry5hwpuf7b.feishu.cn/wiki/LiT2woqpHi4kKPkJ2bPcQaSsnZf
